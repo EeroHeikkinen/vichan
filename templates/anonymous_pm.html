@@ -1,0 +1,42 @@
+<div style="text-align: center;"><img style="width: 350px;" src="https://www.a-klinikka.fi/sites/all/themes/saatioresponsive2017/logo.png" /></div>
+<p style="text-align: center;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+<form action="?/new_PM/{{ username|e }}" method="post">
+	<input type="hidden" name="token" value="{{ token }}">
+	<table>
+		{% if mod %}
+		{% else %}
+			<tr>
+				<th>{% trans 'Enter a username' %}</th>
+			<td>
+				<input size="20" maxlength="30" type="text" name="login_or_create_username" value="{{ user.username|e }}" autocomplete="off">
+			</td>
+		</tr>
+		<tr>
+			<th>{% trans 'Enter a password' %}</th>
+			<td>
+				<input size="20" maxlength="30" type="password" name="login_or_create_password" value="" autocomplete="off">
+			</td>
+		</tr>
+		<tr>
+			<td class="form-info" colspan="2">
+				{% trans 'Login with this username and password to access the reply.' %}
+			</td>
+		</tr>
+			{% endif %}
+		
+		<tr>
+			<th>To</th>
+			{% if mod|hasPermission(config.mod.editusers) %}
+				<td><a href="?/users/{{ id }}">{{ username|e }}</a></td>
+			{% else %}
+				<td>{{ username|e }}</td>
+			{% endif %}
+		</tr>
+		<tr>
+			<th>Message</th>
+			<td><textarea name="message" rows="10" cols="40">{{ message }}</textarea></td>
+		</tr>
+	</table>
+
+	<p style="text-align:center"><input type="submit" value="{% trans 'Send message' %}"></p>
+</form>
