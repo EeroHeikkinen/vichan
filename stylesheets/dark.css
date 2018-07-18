@@ -71,7 +71,7 @@ h1 {
 }
 
 header div.subtitle,h1 {
-  color: #AF0A0F;
+  color: #E1EAF4;
   text-align: center;
 }
 
@@ -187,7 +187,7 @@ div.banner a:hover {
 
 img.banner,img.board_image {
   display: block;
-  border: 1px solid #a9a9a9;
+  border: 1px solid rgba(169, 169, 169, 0.18);
   margin: 12px auto 0 auto;
 }
 
@@ -1249,7 +1249,7 @@ a.post_no {
 	text-decoration: none;
 }
 a.post_no:hover {
-	color: #32DD72 !important;
+	color: #ffffff !important;
 	text-decoration: underline overline;
 }
 div.post.reply {
@@ -1269,7 +1269,7 @@ div.post.reply div.body a:link, div.post.reply div.body a:visited {
 	color: #CCCCCC;
 }
 div.post.reply div.body a:link:hover, div.post.reply div.body a:visited:hover {
-	color: #32DD72;
+	color: #ffffff;
 }
 .intro span.subject {
 	font-size: 12px;
@@ -1278,7 +1278,7 @@ div.post.reply div.body a:link:hover, div.post.reply div.body a:visited:hover {
 	font-weight: 800;
 }
 .intro span.name {
-	color: #32DD72;
+	color: #ffffff;
 	font-weight: 800;
 }
 .intro a.capcode, p.intro a.nametag {
@@ -1307,10 +1307,10 @@ form table tr th {
 	color: #AAAAAA;
 	font-weight: 800;
 	text-align: left;
-	padding: 0;
+	padding: 6px;
 }
 div.banner {
-	background: #32DD72;
+	background: #ffffff;
 	color: #000;
 	text-align: center;
 	width: 250px;
@@ -1332,7 +1332,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background: #555555;
 	border: #888888 1px solid;
-	color: #32DD72;
+	color: #ffffff;
 }
 input[type="text"]:focus {
     border:#aaa 1px solid;
@@ -1368,7 +1368,7 @@ div.ban {
 }
 div.ban h2 {
 	background: transparent;
-	color: lime;
+	color: #E1EAF4;
 	font-size: 12px;
 }
 table.modlog tr th {
@@ -1403,4 +1403,7 @@ div.report {
 
 #quick-reply table {
 	background: none repeat scroll 0% 0% #333 !important;
+}
+input[name="delete"] {
+    display: none;
 }
