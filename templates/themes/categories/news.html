@@ -24,7 +24,7 @@
 					{% else %}
 						<em>{% trans %}no subject{% endtrans %}</em>
 					{% endif %}
-					<span class="unimportant"> &mdash; {% trans %}by{% endtrans %} {{ entry.name }} {% trans %}at{% endtrans %} {{ entry.time|date(config.post_date) }}</span>
+					<span class="unimportant"> &mdash; {#% trans %}by{% endtrans %} {{ entry.name }} {% trans %}at{% endtrans %#} {{ entry.time|date(config.post_date) }}</span>
 				</h2>
 				<p>{{ entry.body }}</p>
 			{% endfor %}
