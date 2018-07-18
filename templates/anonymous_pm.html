@@ -1,31 +1,31 @@
 <div style="text-align: center;"><img style="width: 350px;" src="{{ config.dir.static ~ 'a-klinikka.png'}}" /></div>
-<p style="text-align: center;">Lähetä yksityisviesti Muunto-hankkeen asiantuntijalle. Viestisi näkee useampi henkilö. Jos haluat lukea vastaukset, voit <a href="mod.php">kirjautua sisään täällä.</a></p>
+<p style="text-align: center;">Lähetä yksityisviesti Muunto-hankkeen asiantuntijalle. Viestiäsi saattaa käsitellä useampi henkilö. </p><p style="text-align: center;">Jos haluat tarkastella oletko saanut vastauksen jo lähettämääsi viestiin, voit <a href="mod.php">kirjautua sisään täällä.</a></p>
 <form action="?/new_PM/{{ username|e }}" method="post">
 	<input type="hidden" name="token" value="{{ token }}">
 	<table>
 		{% if mod %}
 		{% else %}
 			<tr>
-				<th>{% trans 'Enter a username' %}</th>
+				<th>{% trans 'Username' %}</th>
 			<td>
 				<input size="20" maxlength="30" type="text" name="login_or_create_username" value="{{ user.username|e }}" autocomplete="off">
 			</td>
 		</tr>
 		<tr>
-			<th>{% trans 'Enter a password' %}</th>
+			<th>{% trans 'Password' %}</th>
 			<td>
 				<input size="20" maxlength="30" type="password" name="login_or_create_password" value="" autocomplete="off">
 			</td>
 		</tr>
 		<tr>
 			<td class="form-info" colspan="2">
-				{% trans 'Login with this username and password to access the reply.' %}
+				{% trans 'Voit lukea vastauksen myöhemmin kirjautumalla käyttäjätunnuksella ja salasanalla.' %}
 			</td>
 		</tr>
 			{% endif %}
 		
 		<tr>
-			<th>To</th>
+			<th>Vastaanottaja</th>
 			{% if mod|hasPermission(config.mod.editusers) %}
 				<td><a href="?/users/{{ id }}">{{ username|e }}</a></td>
 			{% else %}
@@ -33,7 +33,7 @@
 			{% endif %}
 		</tr>
 		<tr>
-			<th>Message</th>
+			<th>Viesti</th>
 			<td><textarea name="message" rows="10" cols="40">{{ message }}</textarea></td>
 		</tr>
 	</table>

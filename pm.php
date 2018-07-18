@@ -13,7 +13,7 @@ function mod_page($title, $template, $args, $subtitle = false) {
 	echo Element('page.html', array(
 		'config' => $config,
 		'mod' => $mod,
-		'hide_dashboard_link' => $template == 'mod/dashboard.html',
+		'hide_dashboard_link' => true,
 		'title' => $title,
 		'subtitle' => $subtitle,
 		'boardlist' => createBoardlist(false),
